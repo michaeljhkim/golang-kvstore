@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"github.com/Anshu-rai89/key-value-store/keyvaluestore"
+	"github.com/golang-kvstore/keyvaluestore"
 )
 
 // HandleSet handles the HTTP endpoint for setting key-value pairs.
@@ -63,7 +63,7 @@ func main() {
 	addr := fmt.Sprintf(":%d", port)
 	fmt.Printf("Starting key-value store on http://localhost%s\n", addr)
 	err := http.ListenAndServe(addr, nil)
-	
+
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
 	}
